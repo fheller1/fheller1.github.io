@@ -5,7 +5,7 @@ permalink: /
 subtitle: Passionate about Robotics and Learning!
 
 profile:
-  align: left
+  align: right
   image: IMG_9173.jpeg
   image_circular: false # crops the image to make it circular
   more_info: # > bla
