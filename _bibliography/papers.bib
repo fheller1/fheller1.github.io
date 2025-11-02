@@ -4,7 +4,13 @@
   booktitle={IROS 2025-5th Workshop on RObotic MAnipulation of Deformable Objects: holistic approaches and challenges forward},
   year={2025},
   preview={heller2025inductive.png},
-  selected={true}
+  selected={true},
+  pdf={https://openreview.net/pdf?id=eTLSEx020o},
+  html={https://fheller1.github.io/tetgraspnets},
+  url={https://openreview.net/forum?id=eTLSEx020o},
+  abs={Humans handle and manipulate soft, deformable objects effortlessly, but robot skill in this domain lags behind. One of the major challenges in robotic manipulation of deformable objects arises from the difficulty of predicting the deformation and stress fields. The gold standard for modeling the physics of deformable objects, and predicting deformation and stress fields, is the computation-heavy Finite Element Method (FEM). Recent advances such as Graph Neural Networks (GNNs) enable learning such fields with high accuracy. 
+  
+  We base our work on the DefGraspNets model, of which we identify key limitations: First, the network predicts stress values at mesh vertices, which is not in line with the physical model of FEM. Second, high mesh resolution and low number of message passing rounds prohibit propagation of information through the entire graph, which hurts performance in edge cases. To overcome these limitations, we propose two modifications as inductive biases to the GNN: Tetrahedron features for predicting values directly at tetrahedrons, and a global feature as shortcut for information relevant to the whole graph. Our results, evaluated with FEM-simulated datasets of grasps on different objects, show that our method outperforms the baseline on nearly all objects, enabling more accurate and physically more realistic predictions. We release our codebase: fheller1.github.io/tetgraspnets}
 }
 
 @inproceedings{duret2025real,
@@ -13,7 +19,16 @@
   booktitle={IROS 2025 Workshop on Tactile Sensing Toward Robot Dexterity and Intelligence},
   year={2025},
   preview={duret2025real.png},
-  selected={true}
+  selected={true},
+  pdf={https://openreview.net/pdf?id=9lTIfriAjP},
+  html={https://tacgraspnets.github.io},
+  url={https://openreview.net/forum?id=9lTIfriAjP},
+  abs={Physical simulation plays a crucial role in the development of robotic manipulation methods, and its importance is even greater when dealing with visual tactile sensors in contact-rich scenarios. Despite years of research, simulating such sensors remains highly challenging—both in terms of the underlying physical dynamics and the rendering of tactile images. In this work, we focus exclusively on the physical simulation aspect, leaving the rendering problem outside the scope of our study.
+
+Related work on visual tactile sensor simulation can be broadly divided into two categories: (i) rigid-body simulations and (ii) soft-body simulations. Rigid-body simulations prioritize execution speed, making them suitable for scenarios requiring large-scale data generation, such as reinforcement learning. In contrast, soft-body approaches offer greater realism by capturing shear forces and deformations under contact with external objects. However, they are significantly more computationally expensive and orders of magnitude slower than rigid-body simulations.
+
+This work addresses the speed limitations of soft-body simulations by leveraging Graph Neural Networks (GNNs). We explore the use of GNN models for simulating grasping interactions with visual tactile sensors, achieving performance gains between
+and times faster than traditional FEM simulations, while predicting both deformation and stress on the sensor. The code is available at: https://tacgraspnets.github.io}
 }
 
 @article{chen2025investigating,
@@ -21,7 +36,7 @@
   author={Chen, Junyi and Kshirsagar, Alap and Heller, Frederik and Andreu, Mario G{\'o}mez and Belousov, Boris and Schneider, Tim and Lin, Lisa PY and Doerschner, Katja and Drewing, Knut and Peters, Jan},
   journal={arXiv preprint arXiv:2505.13231},
   year={2025},
-  preview={chen2025investigating}
+  preview={chen2025investigating.png}
 }
 
 @inproceedings{kshirsagar2024hardness,
@@ -30,5 +45,7 @@
   booktitle={40th Anniversary of the IEEE International Conference on Robotics and Automation (ICRA@40)},
   year={2024},
   preview={kshirsagar2024hardness.png},
-  selected={true}
+  selected={true},
+  pdf={https://alapkshirsagar.github.io/assets/paper-pdfs/2024-09-23-hardness-icra40.pdf},
+  html={https://alapkshirsagar.github.io/papers/hardness-icra40},
 }
