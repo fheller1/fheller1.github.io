@@ -362,16 +362,17 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-thankful-to-have-received-the-ieee-ras-travel-grant-to-present-our-work-on-hardness-similarity-detection-using-vbts-at-icra-40-in-rotterdam",
+          title: 'Thankful to have received the IEEE RAS Travel Grant to present our work...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-i-m-happy-that-i-will-be-spending-six-months-with-porsche-ag-in-weissach-as-ml-intern-in-vehicle-safety",
+          title: 'I’m happy that I will be spending six months with Porsche AG in...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-i-have-successfully-defended-my-bachelor-s-thesis-on-learning-object-stress-and-deformation-with-graph-neural-networks",
+          title: 'I have successfully defended my Bachelor’s thesis on Learning Object Stress and Deformation...',
+          description: "",
+          section: "News",},{id: "news-i-ve-started-my-exchange-stay-with-the-iiis-at-tsinghua-in-beijing-china",
+          title: 'I’ve started my exchange stay with the IIIS at Tsinghua in Beijing, China!...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
