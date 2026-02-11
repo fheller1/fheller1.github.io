@@ -362,6 +362,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
             },},{id: "news-thankful-to-have-received-the-ieee-ras-travel-grant-to-present-our-work-on-hardness-similarity-detection-using-vbts-at-icra-40-in-rotterdam",
           title: 'Thankful to have received the IEEE RAS Travel Grant to present our work...',
           description: "",
