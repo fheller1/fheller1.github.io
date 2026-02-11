@@ -49,3 +49,37 @@ and times faster than traditional FEM simulations, while predicting both deforma
   pdf={https://alapkshirsagar.github.io/assets/paper-pdfs/2024-09-23-hardness-icra40.pdf},
   html={https://alapkshirsagar.github.io/papers/hardness-icra40},
 }
+
+@mastersthesis{heller2024learning,
+  title={Learning Object Stress and Deformation With Graph Neural Networks},
+  author={Heller, Frederik},
+  school={Technische Universität Darmstadt},
+  address={Darmstadt, Germany},
+  year={2024},
+  month={August},
+  type={Bachelor's Thesis},
+  note={Reviewers: Alap Kshirsagar, Tim Schneider, Guillaume Duret, Jan Peters},
+  preview={heller2024learning.png},
+  selected={true},
+  pdf={heller2024learning.pdf},
+  abs={Deformable objects are ubiquitous in our daily lives, and we humans handle and manipu-
+late them instinctively. Robots lack this intuitive judgement, and their capabilities today
+are far behind human skill. Traditional approaches to robotic grasping predominantly fo-
+cus on rigid objects or used questionable simplifications of object deformation dynamics.
+Recently, robotic simulators predict object deformation based on the realistic finite ele-
+ment method, and learning-based approaches can predict deformation and stress more
+accurately.
+
+In this work, we re-implement the DefGraspNets model: It is a graph neural network
+capable of predicting object deformation and stress fields resulting in robotic grasp ex-
+periments. Our implementation allows training directly on ground truth data files output
+by a FEM-based simulator, which was not possible in the released baseline. Additionally,
+we propose two key modifications: The first allows inference on datapoints without need-
+ing to launch a simulation. The second extends the graph neural network architecture,
+informing about tetrahedral elements in the mesh. Stress values are then predicted at
+tetrahedra, which is a physically more sensible way. We provide a detailed evaluation
+of a multitude of training runs conducted. Our training results suggest the capability of
+our implementation, but also limitations of the model. We release our codebase and gen-
+erated dataset, and are confident that it will accelerate future research in this exciting
+field.}
+}
