@@ -374,7 +374,12 @@ ninja.data = [{
           section: "News",},{id: "news-i-ve-started-my-exchange-stay-with-the-iiis-at-tsinghua-in-beijing-china",
           title: 'I’ve started my exchange stay with the IIIS at Tsinghua in Beijing, China!...',
           description: "",
-          section: "News",},{id: "projects-project-1",
+          section: "News",},{id: "news-had-a-great-time-in-hangzhou-presenting-our-two-workshop-posters-at-iros-2025",
+          title: 'Had a great time in Hangzhou, presenting our two workshop posters at IROS...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/iros2025/";
+            },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {
