@@ -1,0 +1,17 @@
+<ul class="news-list">
+  {% assign news = site.news | sort: 'date' | reverse %}
+  {% for item in news %}
+    <li>
+      <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %Y' }}</time>
+      <div>
+        {% if item.inline %}
+          {{ item.content | markdownify }}
+        {% else %}
+          <p>
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          </p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,11 @@
+---
+layout: homepage
+---
+<article>
+  <h2>{{ page.title | default: 'News' | escape }}</h2>
+  <p class="post-date">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>
+  </p>
+  {{ content }}
+  <p><a href="{{ '/news/' | relative_url }}">All news</a></p>
+</article>

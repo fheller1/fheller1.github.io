@@ -1,17 +1,35 @@
+@inproceedings{chen2026investigating,
+  title={Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors},
+  author={Chen, Junyi and Heller, Frederik and G{\'o}mez Andreu, Mario and Belousov, Boris and Schneider, Tim and Lin, Lisa P. Y. and Doerschner, Katja and Drewing, Knut and Peters, Jan and Kshirsagar, Alap},
+  equal_contribution_count={2},
+  booktitle={2026 IEEE-RAS 25th International Conference on Humanoid Robots (Humanoids)},
+  year={2026},
+  sortkey={1},
+  arxiv={2505.13231},
+  status={Accepted.},
+  preview={chen2025investigating.png},
+  selected={true},
+  html={https://fheller1.github.io/ActiveHardness/},
+  abs={Hardness is one of the most important object properties that humans and robots perceive through touch. This paper investigates active sampling strategies for sample-efficient hardness classification with vision-based tactile sensors (VBTS), using information-theoretic measures of model uncertainty. We evaluate three probabilistic classifier models and two active sampling strategies and a random sampling baseline on a hardness classification task, with our own dataset of VBTS samples collected by a robot and a previously published dataset. Additionally, we conducted a human study on the hardness classification task on our dataset. Our findings indicate that the active sampling approaches, driven by variance and entropy as measures of model uncertainty, perform best with accuracy reaching 90%, compared to human accuracy of 48%, demonstrating the effectiveness of using VBTS for hardness classification. Our method and dataset are released on the accompanying website: fheller1.github.io/ActiveHardness}
+}
+
 @inproceedings{duret2026softrobotics,
   title={Real-Time Simulation of Deformable Tactile Sensors and Objects in Robotic Grasping using Graph Neural Networks with Inductive Biases},
   author={Duret, Guillaume and Heller, Frederik and Mazurak, Danylo and Schneider, Tim and Kshirsagar, Alap and Zara, Florence and Peters, Jan and Chen, Liming},
+  equal_contribution_count={3},
   booktitle={2026 IEEE 9th International Conference on Soft Robotics (RoboSoft)},
+  award={Best Student Paper Award---Finalist},
   year={2026},
   month={April},
   pages={73--80},
   address={Kanazawa, Japan},
-  doi={10.1109/RoboSoft67810.2026.11522857},
-  preview={duret2025real.png},
+  doi={10.1109/robosoft67810.2026.11522857},
+  preview={duret2026softrobotics.gif},
   selected={true},
-  pdf={https://shanluo.github.io/ViTacWorkshops/assets/accepted_paper/pdf/15.pdf},
+  pdf={https://alapkshirsagar.github.io/assets/paper-pdfs/2026-01-30-tacgraspnets-robosoft.pdf},
   html={https://tacgraspnets.github.io/},
-  url={https://doi.org/10.1109/RoboSoft67810.2026.11522857}
+  url={https://ieeexplore.ieee.org/document/11522857/},
+  abs={Physical simulation of deformable bodies is crucial for robotic manipulation, particularly for applications involving deformable objects and deformable tactile sensors. While Finite Element Method (FEM) simulations provide high accuracy for modeling deformable objects and tactile sensors, they are prohibitively expensive for real-time applications, with simulation times often exceeding practical limits for robotic control and learning. This paper presents a novel Graph Neural Network (GNN) framework that accelerates the simulation of tactile sensors by factors of 10²–10⁴ compared to FEM, while maintaining high physical accuracy. Our approach addresses limitations in existing GNN-based physics learning through inductive biases. The key contributions include: (1) extending FEM simulation to deformable tactile sensors in grasping scenarios, (2) incorporating novel inductive biases through tetrahedral features and global graph features to improve information propagation and training stability, and (3) demonstrating the first successful application of GNN simulation for tactile sensors with generalization to unseen objects. Additionally, the inductive biases reduce prediction errors by up to 45% compared to baseline approaches. This work enables real-time simulation of soft tactile sensors and deformable objects for robotic applications, including deformation and stress prediction. All simulation and training code can be found at https://tacgraspnets.github.io/.}
 }
 
 @inproceedings{heller2025inductive,
@@ -49,16 +67,6 @@ This work addresses the speed limitations of soft-body simulations by leveraging
 and times faster than traditional FEM simulations, while predicting both deformation and stress on the sensor. The code is available at: https://tacgraspnets.github.io}
 }
 
-@inproceedings{chen2026investigating,
-  title={Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors},
-  author={Chen, Junyi and Heller, Frederik and Gomez Andreu, Mario Alejandro and Belousov, Boris and Schneider, Tim and Lin, Lisa and Doerschner, Katja and Drewing, Knut and Peters, Jan and Kshirsagar, Alap},
-  booktitle={2026 IEEE-RAS 25th International Conference on Humanoid Robots (Humanoids)},
-  year={2026},
-  note={Accepted for presentation; proceedings publication forthcoming},
-  arxiv={2505.13231},
-  preview={chen2025investigating.png}
-}
-
 @inproceedings{kshirsagar2024hardness,
   title={Hardness Similarity Detection Using Vision-Based Tactile Sensors},
   author={Kshirsagar, Alap and Heller, Frederik and Andreu, Mario G{\'o}mez and Belousov, Boris and Schneider, Tim and Lin, Lisa PY and Doerschner, Katja and Drewing, Knut and Peters, Jan},
@@ -69,6 +77,7 @@ and times faster than traditional FEM simulations, while predicting both deforma
   selected={true},
   pdf={https://alapkshirsagar.github.io/assets/paper-pdfs/2024-09-23-hardness-icra40.pdf},
   html={https://alapkshirsagar.github.io/papers/hardness-icra40},
+  abs={Humans can classify deformable materials according to their hardness similarity, but existing robotic approaches focus on hardness recognition or absolute hardness prediction. In this work, we investigate hardness similarity detection using a vision-based tactile sensor (VBTS) and evaluate three methods: optical flow features and support vector machine (SVM) classifier, DINOv2 features and SVM classifier, and convolutional long short term memory (ConvLSTM) network trained with categorical cross-entropy loss. To evaluate these methods, we created a dataset of over 200 videos by pressing a GelSight Mini sensor, attached to a Franka-Panda robot, on five silicone objects of varying hardness, and also conducted a human-participant study showing humans achieved 80.25% average accuracy in hardness similarity detection. The three methods achieved average accuracies of 77.66%, 67.00%, and 70.00% with 15 samples per object, demonstrating that a VBTS can effectively classify objects based on hardness similarity.}
 }
 
 @mastersthesis{heller2024learning,
@@ -79,10 +88,11 @@ and times faster than traditional FEM simulations, while predicting both deforma
   year={2024},
   month={August},
   type={Bachelor's Thesis},
-  note={Bachelor's Thesis in the field of study Computational Engineering at Technische Universität Darmstadt. Reviewers: Alap Kshirsagar, Tim Schneider, Guillaume Duret, Jan Peters},
+  note={Bachelor's Thesis in the field of study Computational Engineering at Technische Universität Darmstadt},
+  supervisors={Alap Kshirsagar, Tim Schneider, Guillaume Duret},
+  examiner={Jan Peters},
   preview={heller2024learning.png},
   selected={true},
-  pdf={heller2024learning.pdf},
   abs={Deformable objects are ubiquitous in our daily lives, and we humans handle and manipu-
 late them instinctively. Robots lack this intuitive judgement, and their capabilities today
 are far behind human skill. Traditional approaches to robotic grasping predominantly fo-

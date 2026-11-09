@@ -1,0 +1,182 @@
+/* Site-specific additions to Minimal Light; upstream styles stay separate. */
+:root {
+  color-scheme: light dark;
+}
+html {
+  scroll-behavior: smooth;
+}
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 1;
+  background: #fff;
+  padding: 0.5rem;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+header p {
+  margin-bottom: 0.65rem;
+}
+header .image.avatar,
+header .image.avatar img {
+  border-radius: 0;
+}
+header .position {
+  font-size: 1.1rem;
+}
+header .email {
+  font:
+    0.85rem "Ubuntu Mono",
+    monospace;
+  overflow-wrap: anywhere;
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1rem;
+  margin: 1rem 0 2rem;
+}
+.site-nav [aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+#main-content > h2:not(:first-child) {
+  margin-top: 2.5rem;
+}
+.theme-credit {
+  margin-top: 3rem;
+}
+.news-list {
+  padding: 0;
+  list-style: none;
+}
+.news-list li {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.7rem;
+}
+.news-list time {
+  font-weight: 500;
+}
+.news-list p {
+  margin: 0;
+}
+.news-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+.publications {
+  margin-top: 1rem;
+}
+.publications h2.bibliography {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+.publications ol.bibliography li {
+  margin-bottom: 1.8rem;
+}
+.pub-row {
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+.publication-image {
+  flex: 0 0 145px;
+}
+.publication-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+#heller2024learning .publication-image img {
+  height: 110px;
+  object-fit: contain;
+}
+.publication-info {
+  min-width: 0;
+  flex: 1;
+}
+.publications .author {
+  margin: 0.25rem 0;
+}
+.contribution-note {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+.publications .publication-award {
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 700;
+  color: #875900;
+}
+.publications .links {
+  margin-top: 0.5rem;
+}
+.publications .links a.btn {
+  display: inline-block;
+  border-radius: 3px;
+  margin: 0 0.3rem 0.4rem 0;
+  font-size: 0.85rem;
+}
+.abstract {
+  margin-top: 0.35rem;
+}
+.abstract summary {
+  cursor: pointer;
+  color: #39c;
+}
+.abstract div {
+  margin-top: 0.5rem;
+}
+.post-date {
+  color: #777;
+}
+@media (max-width: 480px) {
+  .pub-row {
+    display: block;
+  }
+  .publication-image {
+    max-width: 220px;
+    margin-bottom: 0.75rem;
+  }
+  .news-list li {
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .publications .publication-award {
+    color: #f3c66b;
+  }
+  code,
+  pre {
+    color: #dadbdf;
+    background: #2c2d39;
+  }
+  .skip-link {
+    background: #20212b;
+  }
+  .abstract summary {
+    color: #3eb7f0;
+  }
+  .post-date {
+    color: #aaa;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

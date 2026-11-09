@@ -1,0 +1,82 @@
+---
+---
+<div class="pub-row" id="{{ entry.key }}">
+  {% if entry.preview %}
+    <div class="publication-image">
+      <img
+        src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}"
+        alt="Illustration for {{ entry.title | escape }}"
+        loading="lazy"
+      >
+    </div>
+  {% endif %}
+  <div class="publication-info">
+    <div class="title">{{ entry.title }}</div>
+    {% assign equal_contribution_count = entry.equal_contribution_count | default: 0 | plus: 0 %}
+    <div class="author">
+      {% for author in entry.author_array %}
+        {% if author.last == 'Heller' and author.first == 'Frederik' -%}
+          <strong>
+            {{- author.first }}
+            {{ author.last -}}
+          </strong>
+        {%- else -%}
+          {{- author.first }}
+          {{ author.last -}}
+        {%- endif -%}
+        {%- if forloop.index <= equal_contribution_count -%}
+          <sup title="Equal contribution">*</sup>
+        {%- endif -%}
+        {%- unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+    {% if equal_contribution_count > 0 %}
+      <div class="contribution-note"><sup>*</sup> Equal contribution</div>
+    {% endif %}
+    <div class="periodical">
+      <em>
+        {%- if entry.booktitle -%}
+          {{- entry.booktitle -}}
+        {%- elsif entry.journal -%}
+          {{- entry.journal -}}
+        {%- elsif entry.school -%}
+          {{- entry.note -}}
+        {%- endif -%}</em
+      >, {{ entry.year }}.
+      {%- if entry.status %}
+        <span class="publication-status">{{ entry.status | escape }}</span>
+      {%- endif -%}
+      {%- if entry.award -%}
+        <strong class="publication-award">{{ entry.award | replace: '---', '—' | escape }}</strong>
+      {%- endif %}
+    </div>
+    {% if entry.supervisors %}
+      <div class="thesis-supervisors">Supervisors: {{ entry.supervisors | escape }}.</div>
+    {% endif %}
+    {% if entry.examiner %}
+      <div class="thesis-examiner">Examiner: {{ entry.examiner | escape }}.</div>
+    {% endif %}
+    <div class="links">
+      {% if entry.pdf %}
+        {% if entry.pdf contains '://' -%}
+          {%- assign pdf_url = entry.pdf -%}
+        {%- else -%}
+          {%- assign pdf_url = entry.pdf | prepend: '/assets/pdf/' | relative_url -%}
+        {%- endif %}
+        <a href="{{ pdf_url }}" class="btn">PDF</a>
+      {% endif %}
+      {% if entry.html -%}
+        <a href="{{ entry.html }}" class="btn">Project page</a>
+      {%- endif %}
+      {% if entry.url -%}
+        <a href="{{ entry.url }}" class="btn">Paper</a>
+      {%- endif %}
+      {% if entry.abs %}
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <div>{{ entry.abs | markdownify }}</div>
+        </details>
+      {% endif %}
+    </div>
+  </div>
+</div>

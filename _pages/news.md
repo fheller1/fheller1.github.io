@@ -1,7 +1,9 @@
 ---
-layout: page
-title: news
+layout: homepage
+title: News
 permalink: /news/
 ---
 
-{% include news.liquid %}
+## News
+
+{% include minimal-news.html %}

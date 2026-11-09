@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% unless page.url == '/' %}{{ page.title | default: 'News' | escape }} | {% endunless %}
+      {{ site.title | escape }}
+    </title>
+    <meta name="description" content="{{ site.description | escape }}">
+    <meta name="keywords" content="{{ site.keywords | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🦾%3C/text%3E%3C/svg%3E"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
+      integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw="
+      crossorigin="anonymous"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+    <link rel="stylesheet" href="{{ '/assets/minimal-light/font.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/minimal-light/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/minimal-light/publications.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/minimal-light/custom.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="wrapper">
+      <header>
+        <a class="image avatar" href="{{ '/' | relative_url }}" aria-label="Home">
+          <img src="{{ site.avatar | relative_url }}" alt="{{ site.title | escape }}">
+        </a>
+        <h1>{{ site.title }}</h1>
+        <p class="position">{{ site.position }}</p>
+        <p>
+          <a href="{{ site.affiliation_link }}">{{ site.affiliation }}</a>
+        </p>
+        {% assign socials = site.data.socials %}
+        <p class="email">
+          <a href="mailto:{{ socials.email }}">{{ socials.email }}</a>
+        </p>
+        <div class="social-icons">
+          {% if socials.scholar_userid %}
+            <a href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}" aria-label="Google Scholar" title="Google Scholar"
+              ><i class="ai ai-google-scholar" aria-hidden="true"></i
+            ></a>
+          {% endif %}
+          {% if socials.linkedin_username %}
+            <a href="https://www.linkedin.com/in/{{ socials.linkedin_username }}/" aria-label="LinkedIn" title="LinkedIn"
+              ><i class="fab fa-linkedin" aria-hidden="true"></i
+            ></a>
+          {% endif %}
+          {% if socials.orcid_id %}
+            <a href="https://orcid.org/{{ socials.orcid_id }}" aria-label="ORCID" title="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>
+          {% endif %}
+        </div>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a
+            href="{{ '/' | relative_url }}"
+            {% if page.url == '/' %}
+              aria-current="page"
+            {% endif %}
+            >About</a
+          >
+          <a
+            href="{{ '/news/' | relative_url }}"
+            {% if page.url == '/news/' %}
+              aria-current="page"
+            {% endif %}
+            >News</a
+          >
+          <a
+            href="{{ '/publications/' | relative_url }}"
+            {% if page.url == '/publications/' %}
+              aria-current="page"
+            {% endif %}
+            >Publications</a
+          >
+        </nav>
+      </header>
+      <section id="main-content" aria-label="Main content">
+        {{ content }}
+        {% if site.enable_footnote %}
+          <p class="theme-credit">
+            <small
+              >Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a>.
+              Hosted on GitHub Pages.</small
+            >
+          </p>
+        {% endif %}
+      </section>
+    </div>
+  </body>
+</html>
